@@ -1,0 +1,158 @@
+﻿<controls:MetroWindow x:Class="WpfApplication2.EditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+          xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"  
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+                          xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="{Binding ThisKey}" Height="400" Width="525" x:Name="windows" ShowInTaskbar="True" WindowStartupLocation="CenterScreen">
+    
+    
+    <Grid>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="KeyUp">
+                <ei:CallMethodAction  TargetObject="{Binding}" MethodName="KeyEvent"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <GroupBox Header="延迟设置" Background="Transparent">
+                <Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">触底延迟:</TextBlock>
+                        <TextBox x:Name="UpDownDelay" Height="20" Width="80" Margin="5,0" Text="{Binding SelectJYComand.KeyValue.UpDownDelay,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                        <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">ms</TextBlock>
+                        <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">键键延迟:</TextBlock>
+                        <TextBox x:Name="KeysDelay" Height="20" Width="80" Margin="5,0" Text="{Binding SelectJYComand.KeyValue.KeysDelays,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                        <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">ms</TextBlock>
+                        <TextBlock VerticalAlignment="Center" Margin="10,0,0,0">执行次数:</TextBlock>
+                        <TextBox  Height="20" Width="80" Margin="5,0" Text="{Binding SelectJYComand.KeyValue.ExcuteTimes,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    </StackPanel>
+                    <!--<TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" FontWeight="Bold"  >
+                        <Run>绑定:</Run>
+                        <Run Text="{Binding ThisKey}"></Run> 
+                    </TextBlock>-->
+                   
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="Gray">
+            <GroupBox Header="按键设置" Background="Transparent">
+                <Grid >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Border Grid.Row="2" BorderThickness="0,0,1,0" BorderBrush="Gray">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextAlignment="Center" Margin="10">请输入主键</TextBlock>
+                                <TextBox   Margin="5" Text="{Binding PKTextValue,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"   >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="KeyUp">
+                                            <ei:CallMethodAction  TargetObject="{Binding}" MethodName="KeyDownEvent"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <TextBox.ToolTip>请按下要输入的键</TextBox.ToolTip>
+                                </TextBox>
+                                <Button  Margin="5" Command="{Binding AddJYCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Right.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button  Margin="5" Command="{Binding RemoveJYCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Left.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Border Grid.Row="2" BorderThickness="0,0,1,0" BorderBrush="Gray">
+                            <DataGrid  IsReadOnly="True" ItemsSource="{Binding JYComandList}" SelectedItem="{Binding SelectJYComand}"  AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" CanUserAddRows="False" CanUserDeleteRows="False" EnableRowVirtualization="False" SelectionMode="Single" >
+                                <!--<i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <ei:CallMethodAction  TargetObject="{Binding DataContext, ElementName=windows}" MethodName="PKSelectJYComand"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>-->
+                                <DataGrid.Columns  >
+                                    <DataGridTextColumn Header="主键" Binding="{Binding KeyValue.PK}" Width="*"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Border Grid.Row="2" BorderThickness="0,0,1,0" BorderBrush="Gray">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock TextAlignment="Center" Margin="10">请输入映射键</TextBlock>
+                                <TextBox  Margin="5" Text="{Binding MapTextValue}" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="KeyUp">
+                                            <ei:CallMethodAction TargetObject="{Binding}" MethodName="MapKeyDownEvent" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <TextBox.ToolTip>请按下要输入的键</TextBox.ToolTip>
+                                </TextBox>
+                                <Button   Margin="5" Command="{Binding AddMapKeyCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Right.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button   Margin="5"  Command="{Binding RemoveMapKeyCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Left.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button   Margin="5" Command="{Binding UpMapKeyCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Up.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button   Margin="5"  Command="{Binding DownMapKeyCommand}">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="..\Resource\Down.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Grid Grid.Column="3">
+                        <Border Grid.Row="2" BorderThickness="0,0,1,0" BorderBrush="Gray">
+                            <DataGrid IsReadOnly="True" ItemsSource="{Binding SelectJYComand.KeyValue.Values}" SelectedItem="{Binding SelectMapKey}" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" CanUserAddRows="False" CanUserDeleteRows="False" EnableRowVirtualization="False" SelectionMode="Single" >
+                                <DataGrid.Columns  >
+                                    <DataGridTextColumn  Header="映射键"  Width="*" Binding="{Binding}"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </GroupBox>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0">  ----By 侠骨丹心 留下小鱼竿</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding OKCommand}" Width="120" Height="30" HorizontalAlignment="Right" Margin="10,2" FontSize="12">确定</Button>
+                <Button Command="{Binding ReverseCommand}" Width="120" Height="30" HorizontalAlignment="Right" Margin="10,2"  FontSize="12" >重置</Button>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</controls:MetroWindow>

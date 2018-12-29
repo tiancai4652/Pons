@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93AE71DF-756C-4557-A305-B137FAF42708}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfApplication2</RootNamespace>
+    <AssemblyName>BiuBiuBiu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\GGGGIHub\Release\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>zh-CN</TargetCulture>
+    <PublisherName>留下小鱼竿</PublisherName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resource\C.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WpfApplication2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9996562FC852F3A7B09BE7F0908D75B3E2B25221</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Pon_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>F:\OneToMulty\packages\ControlzEx.3.0.2.4\lib\net40\ControlzEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>F:\OneToMulty\packages\MahApps.Metro.1.6.5\lib\net40\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\OneToMulty\WpfApplication1\Dll\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>F:\OneToMulty\packages\ControlzEx.3.0.2.4\lib\net40\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Base\BoolColorConvertor.cs" />
+    <Compile Include="Base\BoolToVisibleConvertor.cs" />
+    <Compile Include="Base\DelegateCommand.cs" />
+    <Compile Include="Base\GroupWithEditor.cs" />
+    <Compile Include="CommandManager.xaml.cs">
+      <DependentUpon>CommandManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Group.cs" />
+    <Compile Include="PonApp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ViewModel\LoadViewModel.cs" />
+    <Compile Include="ViewModel\SetGroupNameViewModel.cs" />
+    <Compile Include="View\HelpView.xaml.cs">
+      <DependentUpon>HelpView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\HelpViewModel.cs" />
+    <Compile Include="Base\JYCommand.cs" />
+    <Compile Include="Base\Key_Values.cs" />
+    <Compile Include="View\LoadView.xaml.cs">
+      <DependentUpon>LoadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Base\DataContext.cs" />
+    <Compile Include="RunForm.xaml.cs">
+      <DependentUpon>RunForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\EditViewModel.cs" />
+    <Compile Include="View\SetGroupNameView.xaml.cs">
+      <DependentUpon>SetGroupNameView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CommandManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoadView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\EditView.xaml.cs">
+      <DependentUpon>EditView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RunForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SetGroupNameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\AlwaysClick\AlwysClick.exe.config" />
+    <None Include="bin\Debug\AlwaysClick\AlwysClick.vshost.exe.config" />
+    <None Include="bin\Debug\AlwaysClick\AlwysClick.vshost.exe.manifest" />
+    <None Include="bin\Debug\Config\Config.cnf" />
+    <None Include="bin\Debug\Pon说明.docx" />
+    <None Include="DataBase\DB.sl3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Left.png" />
+    <Resource Include="Resource\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Add.png" />
+    <Resource Include="Resource\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\X.png" />
+    <Resource Include="Resource\XX.png" />
+    <Resource Include="TEXT\XX.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\C.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Down.png" />
+    <Resource Include="Resource\Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AlwaysClick\DD81200x64.32.dll" />
+    <Content Include="bin\Debug\AlwaysClick\DD81200x64.64.dll" />
+    <Content Include="bin\Debug\DD81200x64.32.dll" />
+    <Content Include="bin\Debug\DD81200x64.64.dll" />
+    <Content Include="bin\Debug\DotNetFX40\dotNetFx40_Full_x86_x64.exe" />
+    <Content Include="bin\Debug\ico\O.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\V.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\ico\X.png" />
+    <Resource Include="bin\Debug\ico\XX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\ico\1.png" />
+    <Resource Include="bin\Debug\ico\2.png" />
+    <Resource Include="bin\Debug\ico\3.png" />
+    <Resource Include="bin\Debug\ico\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Delete.png" />
+    <Resource Include="Resource\Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\qqq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Install.png" />
+    <Resource Include="Resource\Circle.png" />
+    <Content Include="bin\Debug\AlwaysClick\AlwysClick.exe" />
+    <Content Include="bin\Debug\AlwaysClick\AlwysClick.pdb" />
+    <Content Include="bin\Debug\AlwaysClick\AlwysClick.vshost.exe" />
+    <Content Include="bin\Debug\AlwaysClick\ControlzEx.dll" />
+    <Content Include="bin\Debug\AlwaysClick\ControlzEx.pdb" />
+    <Content Include="bin\Debug\AlwaysClick\MahApps.Metro.dll" />
+    <Content Include="bin\Debug\AlwaysClick\MahApps.Metro.pdb" />
+    <Content Include="bin\Debug\AlwaysClick\System.Net.Http.dll" />
+    <Content Include="bin\Debug\AlwaysClick\System.Windows.Interactivity.dll" />
+    <Content Include="bin\Debug\AlwaysClick\zh-Hans\System.Net.Http.resources.dll" />
+    <Content Include="bin\Debug\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
+    <Content Include="Video\20180814_151856.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
