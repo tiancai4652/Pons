@@ -259,7 +259,6 @@
   <ItemGroup>
     <Resource Include="Resource\X.png" />
     <Resource Include="Resource\XX.png" />
-    <Resource Include="TEXT\XX.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\C.ico" />
