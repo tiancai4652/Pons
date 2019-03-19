@@ -147,7 +147,7 @@
         </Border>
 
         <Grid Grid.Row="2">
-            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0">  ----By 侠骨丹心 留下小鱼竿</TextBlock>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0">  ----By 侠骨丹心 混子营营长</TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Command="{Binding OKCommand}" Width="120" Height="30" HorizontalAlignment="Right" Margin="10,2" FontSize="12">确定</Button>
                 <Button Command="{Binding ReverseCommand}" Width="120" Height="30" HorizontalAlignment="Right" Margin="10,2"  FontSize="12" >重置</Button>
