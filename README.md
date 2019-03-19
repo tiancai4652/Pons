@@ -16,10 +16,14 @@
 #### 按F1启动，默认ESC结束
 
 * 点击+号,列表会出现新一项
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/1.png)
 * 鼠标点击None,按下自己想启动的键,本例子启动键F1，此时，None会自动变成F1，点击编辑按钮
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/2.png)
 * 左边按下主键， Keys.1
 * 右边输入映射键， Keys.F1，Kyes.1
-
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/3.png)
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/4.png)
 * '》》'输入  ‘《《’删除
 
 * 回到主界面，点击三角形执行
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/5.png)
