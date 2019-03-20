@@ -1,5 +1,5 @@
 # Pons
-### 实现类似于键盘宏功能
+## 实现类似于键盘宏功能
 
 * 1 key.1=Key.F1+Key.1
 * 2 循环播放某些键
@@ -27,3 +27,12 @@
 
 * 回到主界面，点击三角形执行
 ![image](https://github.com/tiancai4652/Pons/blob/master/Images/5.png)
+
+
+
+## 鼠标连点器功能
+
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/6.png)
+* 弹出连点器程序，设置一个热键，点击启用
+![image](https://github.com/tiancai4652/Pons/blob/master/Images/7.png)
+* 按下设置的热键，启动连点，再按一下，取消连点
