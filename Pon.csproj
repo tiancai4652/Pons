@@ -94,8 +94,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>F:\OneToMulty\WpfApplication1\Dll\Microsoft.Expression.Interactions.dll</HintPath>
+      <HintPath>packages\MicrosoftExpressionInteractions.3.0.40218.0\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -222,7 +221,6 @@
     <None Include="bin\Debug\AlwaysClick\AlwysClick.vshost.exe.config" />
     <None Include="bin\Debug\AlwaysClick\AlwysClick.vshost.exe.manifest" />
     <None Include="bin\Debug\Config\Config.cnf" />
-    <None Include="bin\Debug\Pon说明.docx" />
     <None Include="DataBase\DB.sl3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
